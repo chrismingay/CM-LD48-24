@@ -1,7 +1,5 @@
 Import ld
 
-Import perling
-
 Class RazText
 
 	Global TextSheet:Image
@@ -12,27 +10,21 @@ Class RazText
 
 	Field OriginalString:String
 	
-	Field CharacterOriginX:Int
-	Field CharacterOriginY:Int
-	Field CharacterWidth:Int
-	Field CharacterHeight:Int
+	Field CharacterOriginX:Int = 0
+	Field CharacterOriginY:Int = 0
+	Field CharacterWidth:Int = 10
+	Field CharacterHeight:Int = 10
 	
 	Field Lines:List<RazChar[]>
 	
-	Field VerticalSpacing:Int
-	Field HorizontalSpacing:Int
+	Field VerticalSpacing:Int = 0
+	Field HorizontalSpacing:Int = -2
 	
 	Field X:Int
 	Field Y:Int
 	
 	Method New()
 		Lines = New List<RazChar[] >
-		CharacterOriginX = 0
-		CharacterOriginY = 0
-		CharacterWidth = 16
-		CharacterHeight = 16
-		HorizontalSpacing = 4
-		VerticalSpacing = 4
 	End
 	
 	Method New(tString:String)
@@ -182,10 +174,10 @@ Class RazText
 					XOff = 8
 					YOff = 0
 				Case ","
-					XOff = 7
+					XOff = 6
 					YOff = 3
 				Case "."
-					XOff = 6
+					XOff = 7
 					YOff = 3
 				Case "!"
 					XOff = 8
@@ -207,6 +199,24 @@ Class RazText
 					YOff = 4
 				Case ":"
 					XOff = 3
+					YOff = 4
+				Case ";"
+					XOff = 4
+					YOff = 4
+				Case "_"
+					XOff = 5
+					YOff = 4
+				Case "("
+					XOff = 6
+					YOff = 4
+				Case ")"
+					XOff = 7
+					YOff = 4
+				Case "*"
+					XOff = 8
+					YOff = 4
+				Case "+"
+					XOff = 9
 					YOff = 4
 				Default
 					XOff = 9
@@ -359,10 +369,10 @@ Class RazText
 					XOff = 8
 					YOff = 0
 				Case ","
-					XOff = 7
+					XOff = 6
 					YOff = 3
 				Case "."
-					XOff = 6
+					XOff = 7
 					YOff = 3
 				Case "!"
 					XOff = 8
@@ -384,6 +394,24 @@ Class RazText
 					YOff = 4
 				Case ":"
 					XOff = 3
+					YOff = 4
+				Case ";"
+					XOff = 4
+					YOff = 4
+				Case "_"
+					XOff = 5
+					YOff = 4
+				Case "("
+					XOff = 6
+					YOff = 4
+				Case ")"
+					XOff = 7
+					YOff = 4
+				Case "*"
+					XOff = 8
+					YOff = 4
+				Case "+"
+					XOff = 9
 					YOff = 4
 				Default
 					XOff = 9
@@ -407,7 +435,7 @@ Class RazText
 	
 	Method AddMutliLines:Void(tString:String)
 		
-		Local tmp:String[] = tString.Split("~n")
+		Local tmp:String[] = tString.Split("~r")
 		For Local i:Int = 0 To tmp.Length() - 1
 			AddLine(tmp[i])
 		Next
