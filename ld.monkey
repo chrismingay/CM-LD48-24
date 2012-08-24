@@ -6,6 +6,7 @@ Import src.framework.camera
 Import src.framework.functions
 Import src.framework.gfx
 Import src.framework.rect
+Import src.framework.raztext
 Import src.framework.screen
 Import src.framework.screenmanager
 Import src.framework.sfx
@@ -13,6 +14,7 @@ Import src.framework.sfx
 Import src.screens.credits
 Import src.screens.exitapp
 Import src.screens.game
+Import src.screens.howtoplay
 Import src.screens.logo
 Import src.screens.title
 
@@ -31,12 +33,17 @@ Class LDApp Extends App
 		' Add the graphics
 		' Use C:\Apps\Aseprite\
 		
+		' Initialize the fonts
+		RazText.SetTextSheet(LoadImage("gfx/fonts.png"))
+		
 		' Add the screens
 		ScreenManager.AddScreen("credits", New CreditsScreen())
 		ScreenManager.AddScreen("exit", New ExitScreen())
 		ScreenManager.AddScreen("game", New GameScreen())
+		ScreenManager.AddScreen("howtoplay", New HowToPlayScreen())
 		ScreenManager.AddScreen("logo", New LogoScreen())
 		ScreenManager.AddScreen("title", New TitleScreen())
+		
 		
 		' Add the sound effects
 		' USE C:\Apps\sfxr\
@@ -79,6 +86,11 @@ Class LDApp Extends App
 		
 		If KeyHit(KEY_5)
 			ScreenManager.ChangeScreen("exit")
+			ScreenChanged = True
+		EndIf
+		
+		If KeyHit(KEY_6)
+			ScreenManager.ChangeScreen("howtoplay")
 			ScreenChanged = True
 		EndIf
 		
