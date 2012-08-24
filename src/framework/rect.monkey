@@ -16,6 +16,6 @@ Class Rect
 	
 End
 
-Function RectOverRect:Void(R1:Rect, R2:Rect)
-	Return RectOverRect(R1.X, R1.Y, R1.W, R1.H, R2.X, R2.Y, R2.W, R2.H)
-End
+'Function RectOverRect:Void(R1:Rect, R2:Rect)
+'	Return RectOverRect(R1.X, R1.Y, R1.W, R1.H, R2.X, R2.Y, R2.W, R2.H)
+'End
