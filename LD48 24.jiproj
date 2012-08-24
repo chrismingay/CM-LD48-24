@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<JiProj xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EntryPoint=".\ld.monkey" Name="LD48 24" OriginalLocation="C:\Documents and Settings\Dev\My Documents\GitHub\LD48_24\">
+<JiProj xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EntryPoint=".\ld.monkey" Name="LD48 24" OriginalLocation="C:\Documents and Settings\Dev\My Documents\GitHub\CM-LD48-24\">
   <Files>
     <Document Filename=".\src\framework\camera.monkey" Open="false" SplitView="false" SplitIsVertical="false" SplitSize="150">
       <DocGUID />
