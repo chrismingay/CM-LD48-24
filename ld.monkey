@@ -16,6 +16,9 @@ Import src.screens.game
 Import src.screens.logo
 Import src.screens.title
 
+Global AppWidth:Int = 800
+Global AppHeight:Int = 600
+
 
 Class LDApp Extends App
 	
